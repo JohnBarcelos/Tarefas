@@ -26,7 +26,7 @@ const contadorcondition = ({ seconds, completed }) => {
 
 //TEXTOS
 const name1 = <Countdown date={Date.now() + 5000} renderer={contadorcondition}/>
-const name2 = <a href={URLGit}> Clique aqui para redirecionar agora</a>
+const name2 = <a href={URLGit} target="_blank"> Clique aqui para redirecionar agora</a>
 const small2 = <span>Ou copie e cole no navegador: {URLGit}</span>
 
 export default props => (
