@@ -5,7 +5,6 @@ import '../template/estilo.css'
 import React from 'react'
 import Menu from '../template/menu'
 import Rotas from './rotas'
-import Timeago from '../template/TimeAgo'
 
 export default props => (
     <div className='container'>
