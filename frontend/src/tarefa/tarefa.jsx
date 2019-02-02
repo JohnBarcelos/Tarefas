@@ -4,14 +4,18 @@ import axios from 'axios'
 import PageHeader from '../template/pageHeader'
 import Form from './Form'
 import Lista from './Lista'
+import {APIBack} from '../main/config'
 
-const URL = 'http://localhost:4002/api/tarefas'
+const URL = APIBack
+
 
 export default class tarefa extends Component {
     constructor(props) {
         super(props)
-        this.state = { description: '', list: [], textoDigitado: '' }
 
+        //Definindo o 
+        this.state = { description: '', list: [], textoDigitado: '' }
+        
         this.handleChange = this.handleChange.bind(this)
         this.handleAdd = this.handleAdd.bind(this)
         this.handleSearch = this.handleSearch.bind(this)
@@ -28,6 +32,7 @@ export default class tarefa extends Component {
         const search = description ? `&description__regex=/${description}/` : ''
         axios.get(`${URL}?sort=-dataCriado${search}`)
             .then(resp => this.setState({...this.state, description, list: resp.data}))
+            //Definindo o State para os dados atuais
     }
 
     handleSearch() {

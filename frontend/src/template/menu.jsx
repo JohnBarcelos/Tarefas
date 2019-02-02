@@ -13,6 +13,7 @@ export default props => (
                 <ul className='nav navbar-nav'>
                     <li><a href="#/tarefas">Cadastro</a></li>
                     <li><a href="#/sobre">Sobre</a></li>
+                    <li><a href="#/github">GitHub</a></li>
                 </ul>
             </div>
         </div>
